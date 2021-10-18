@@ -16,3 +16,4 @@ class Movie < Item
 
     false
   end
+end
