@@ -1,13 +1,12 @@
 require "date"
-
 class Item
 
   attr_accessor :archieved, :publish_date
   # attr_reader
 
-  def initialize(publish_date)
+  def initialize(params)
     @id = Time.now.to_i
-    @publish_date = publish_date
+    @publish_date = params[:publish_date]
     @archieved = false
   end
 
@@ -26,5 +25,5 @@ class Item
   end
 end
 
-# p Item.new(publish_date: "2020-05-05")
-
+# item = Item.new(publish_date: "2020-05-05")
+# p item.send :can_be_archieved?
