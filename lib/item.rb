@@ -2,10 +2,10 @@ require "date"
 
 class Item
 
-  attr_accessor :archieved
-  attr_reader :publish_date
+  attr_accessor :archieved, :publish_date
+  # attr_reader
 
-  def initialize(publish_date:)
+  def initialize(publish_date)
     @id = Time.now.to_i
     @publish_date = publish_date
     @archieved = false
@@ -26,5 +26,5 @@ class Item
   end
 end
 
-# p Item.new(publish_date: "2020-05-05").move_to_archive
+# p Item.new(publish_date: "2020-05-05")
 
