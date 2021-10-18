@@ -1,7 +1,10 @@
 require_relative "item"
 
 class MusicAlbum < Item
-  def initialize(params)
+
+  attr_accessor :on_spotify
+
+  def initialize(params = {})
     super
     @on_spotify = params[:on_spotify]
   end

@@ -4,7 +4,7 @@ class Item
   attr_accessor :archieved, :publish_date
   # attr_reader
 
-  def initialize(params)
+  def initialize(params = {})
     @id = Time.now.to_i
     @publish_date = params[:publish_date]
     @archieved = false
